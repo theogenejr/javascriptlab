@@ -56,7 +56,7 @@ export default function Notebook() {
 
   const executeCode = (cellId: string, isIsolated: boolean) => {
     let accumulatedCode = "";
-    let targetCellIndex = cells.findIndex((cell) => cell.id === cellId);
+    const targetCellIndex = cells.findIndex((cell) => cell.id === cellId);
 
     setCells(
       cells.map((cell, index) => {
